@@ -1,0 +1,35 @@
+var app = require('../app');
+var port = process.env.PORT || 9001;
+
+function runServer() {
+
+    app = app.listen(port, process.env.IP || '0.0.0.0', function() {
+        var addr = app.address();
+
+        if (addr.address === '0.0.0.0') {
+            addr.address = 'localhost';
+        }
+
+        var domainURL = 'http://' + addr.address + ':' + addr.port + '/';
+
+        console.log('socket.io is listening at: ' + domainURL);
+    });
+
+    require('../Signaling-Server.js')(app, function(socket) {
+        try {
+            var params = socket.handshake.query;
+
+            if (!params.socketCustomEvent) {
+                params.socketCustomEvent = 'custom-message';
+            }
+
+            socket.on(params.socketCustomEvent, function(message) {
+                try {
+                    socket.broadcast.emit(params.socketCustomEvent, message);
+                } catch (e) {}
+            });
+        } catch (e) {}
+    });
+}
+
+runServer();

@@ -1,0 +1,76 @@
+{
+  "name": "web3rtc",
+  "preferGlobal": false,
+  "version": "3.4.4",
+  "author": {
+    "name": "Haoming Wang",
+    "email": "wanghaoming820@outlook.com"
+  },
+  "description": "Web3RTC is a WebRTC app with Audio/Video/Text chatting and Eth donation features.",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "engines": {
+    "node": "latest"
+  },
+  "main": "./dist/RTCMultiConnection.js",
+  "keywords": [
+    "web3",
+    "web3js",
+    "eth",
+    "ethereum",
+    "blockchain",
+    "peer-to-peer",
+    "peer2peer",
+    "peer",
+    "webrtc",
+    "webrtc-library",
+    "library",
+    "javascript",
+    "chrome",
+    "firefox",
+    "opera",
+    "ie",
+    "internet-explorer",
+    "android",
+    "rtcweb",
+    "multirtc",
+    "webrtc-experiment",
+    "javascript-library",
+    "haoming",
+    "haoming-wang"
+  ],
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.1.3",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "socket.io": "latest"
+  },
+  "analyze": false,
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smupyknight/webrtc/issues",
+    "email": "wanghaoming820@outlook.com"
+  },
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-bump": "0.7.0",
+    "grunt-cli": "0.1.13",
+    "grunt-contrib-clean": "0.6.0",
+    "grunt-contrib-concat": "0.5.1",
+    "grunt-contrib-copy": "0.8.2",
+    "grunt-contrib-uglify": "0.11.0",
+    "grunt-jsbeautifier": "0.2.10",
+    "grunt-replace": "0.11.0",
+    "load-grunt-tasks": "3.4.0"
+  }
+}
